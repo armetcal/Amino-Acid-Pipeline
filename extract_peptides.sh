@@ -6,19 +6,19 @@
 
 # Example long usage:~~~~
 #DATA_DIRECTORY="/home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted"
-#./extract_peptides.sh \
+# ./extract_peptides.sh \
 #    --working-dir $(pwd) \
-    # --humann-out $DATA_DIRECTORY/humann_out/ur50/mtx \
-    # --targets mtx_uniprot50_prev50_abun1_bug3_IDs.txt \
-    # --fastq-dir $DATA_DIRECTORY/hostile/concatenated \
-    # --output-dir extract_peptides_outputs \
-    # --database /home/armetcal/scratch/humann_databases/uniref50/uniref50_201901b_full.dmnd \
-    # --max-targets 5 \
-    # --evalue 1e-3 \
-    # --pident 90 \
-    # --min-length 7 \
-    # --sensitive \
-    # --rerun
+#     --humann-out $DATA_DIRECTORY/humann_out/ur50/mtx \
+#     --targets mtx_uniprot50_prev50_abun1_bug3_IDs.txt \
+#     --fastq-dir $DATA_DIRECTORY/hostile/concatenated \
+#     --output-dir extract_peptides_outputs \
+#     --database /home/armetcal/scratch/humann_databases/uniref50/uniref50_201901b_full.dmnd \
+#     --max-targets 5 \
+#     --evalue 1e-3 \
+#     --pident 90 \
+#     --min-length 7 \
+#     --sensitive \
+#     --rerun
 
 # Example short usage:~~~~
 # DATA_DIRECTORY="/home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted"
