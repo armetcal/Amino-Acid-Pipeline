@@ -7,7 +7,7 @@
 # Example usage:~~~~
 #./step1_function.sh \
 #  --working-dir /scratch/armetcal/cmmi/pilot_g4h/extract_relevant_aa_seqs \
-#  --humann-root /home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted/humann_out/ur50/mtx \
+#  --humann-out /home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted/humann_out/ur50/mtx \
 #  --targets mtx_uniprot50_prev50_abun1_bug3_IDs.txt \
 #  --output-dir temp_pipeline/step1 \
 #  --fastq-dir /home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted/hostile/concatenated \
@@ -26,7 +26,7 @@ usage() {
     echo ""
     echo "OPTIONS:"
     echo "  -w, --working-dir DIR      Working directory (required)"
-    echo "  -r, --humann-root DIR      HUMAnN2 output root directory (required)"
+    echo "  -r, --humann-out DIR      HUMAnN2 output root directory (required)"
     echo "  -t, --targets FILE         Targets file with UniRef50 IDs (required)"
     echo "  -o, --output-dir DIR       Output directory (required)"
     echo "  -f, --fastq-dir DIR        Directory with original FASTQ files (required)"
@@ -34,7 +34,7 @@ usage() {
     echo "  -h, --help                 Show this help message"
     echo ""
     echo "EXAMPLE:"
-    echo "  $0 --working-dir /scratch/user/project --humann-root /path/to/humann_out --targets targets.txt --output-dir /path/to/output --fastq-dir /path/to/fastq_files --sample-index 1"
+    echo "  $0 --working-dir /scratch/user/project --humann-out /path/to/humann_out --targets targets.txt --output-dir /path/to/output --fastq-dir /path/to/fastq_files --sample-index 1"
 }
 
 # Function to extract DNA sequences from HUMAnN2 results
@@ -211,7 +211,7 @@ while [[ $# -gt 0 ]]; do
             WORKING_DIRECTORY="$2"
             shift 2
             ;;
-        -r|--humann-root)
+        -r|--humann-out)
             ROOT="$2"
             shift 2
             ;;
