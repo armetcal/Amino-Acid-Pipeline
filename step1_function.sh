@@ -342,8 +342,8 @@ create_step1_summary_table() {
 }
 
 # Call the table function
-SUMMARY_TABLE="$OUTPUT_DIR/step1_samples_summary.tsv"
-create_step1_summary_table "$OUTPUT_DIR" "$SUMMARY_TABLE"
+SUMMARY_TABLE="$OUTROOT/step1_samples_summary.tsv"
+create_step1_summary_table "$OUTROOT" "$SUMMARY_TABLE"
 
 # Final status
 EXIT_CODE=$?
