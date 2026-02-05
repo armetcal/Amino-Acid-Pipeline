@@ -34,13 +34,20 @@ This pipeline extracts protein sequences that correspond to UniRef IDs of intere
 ```
 working_directory/
 ├── extract_peptides_outputs/
-│   ├── sample1_dna_seqs/               # Step 1: Extracted DNA sequences
-│   │   └── target_dna_sequences.fa
+│   │
+│   ├── sampleX_dna_seqs/               
+│   │   └── target_dna_sequences.fa     # Step 1: Extracted DNA sequences
+│   ├── sampleX_step1_completed.flag    # Step 1: flag file with stats
 │   ├── step1_samples_summary.tsv       # Step 1: Sample statistics
 │   ├── *_step1_completed.flag          # Step 1: Completion markers
+│   │
 │   ├── diamond_blast_results.tsv       # Step 2: BLAST results (reusable)
+│   ├── combined_dna_sequences.fa       # Step 2: 
+│   ├── six_frame_translated.fa         # Step 2: 
+│   ├── deduplicated_dna_sequences.fa   # Step 2: 
 │   ├── filtered_blast_hits.tsv         # Step 2: Quality-filtered hits
 │   ├── all_samples_deduplicated.faa    # Step 2: Final protein sequences
+│   │
 │   └── logs/                           # SLURM job logs                             
 └── targets.txt  # Target UniRef IDs
 ```
