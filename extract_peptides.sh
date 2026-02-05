@@ -5,7 +5,7 @@
 # Step 2: Translation and BLAST validation of extracted sequences (single job)
 
 # Example long usage:~~~~
-#DATA_DIRECTORY="/home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted"
+# DATA_DIRECTORY="/home/armetcal/projects/rrg-bfinlay/armetcal/cmmi/pilot_g4h/mtx_extracted"
 # ./extract_peptides.sh \
 #    --working-dir $(pwd) \
 #     --humann-out $DATA_DIRECTORY/humann_out/ur50/mtx \
@@ -191,7 +191,8 @@ EOF
         "${step2_cmd[@]}")
     
     echo "Step 2 job ID: $step2_job_id"
-    echo "=== Pipeline Submission Complete ==="
+    echo "=== Step 2 Submitted to SLURM ==="
+    echo "NOTE: pipeline is NOT complete until Step 2 finishes!!"
     echo "Step 2 will run automatically after Step 1 finishes"
     echo "Monitor: squeue -j $step2_job_id"
     echo "Step 1 results: $STEP1_OUTPUT"
